@@ -33,14 +33,6 @@ html {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-#wrapper {
-  max-width: 1180px;
-  width: 100%;
-  margin: 0 auto;
-  background-color:aquamarine;
-  height: 100vh;
-}
-
 /*
 #######################################################
 
@@ -50,7 +42,7 @@ Header Section
 */
 
 header {
-  background: url(../images/background.jpg) no-repeat center center fixed;
+  background: url(../images/background-header) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,6 +52,127 @@ header {
   position: relative;
   background-attachment: scroll;
 }
+
+.header-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 50px 20px 0 20px;
+}
+
+.header-container .nav-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.header-container .nav-container nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header-container .nav-container nav ul {
+  display: flex;
+}
+
+.header-container .nav-container nav ul li {
+  margin: 0 20px;
+}
+
+.header-container .nav-container nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header-container .nav-container nav ul li:last-child a {
+  background-color: #a100ff;
+  padding: 10px 15px 10px 25px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
+.header-container .nav-container nav ul li:last-child a:hover {
+  cursor: pointer;
+  background-color: #28c8c6;
+}
+
+.header-container .nav-container nav ul li a span{
+  display: inline-block;
+}
+
+.header-container .sub-header-container {
+  margin-top: 225px;
+  max-width: 553px;
+  width: 100%;
+}
+
+.header-container .sub-header-container h1 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 60px;
+  color: #fff;
+}
+
+.header-container .sub-header-container p {
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: normal;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.header-container .input-container {
+  display: flex;
+}
+
+.header-container .input-container .input-pos {
+  position: relative;
+}
+
+.header-container .input-container .input-pos i {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  color: #28c8c6;
+  font-size: 19px;
+}
+
+.header-container .input-container input{
+  margin-right: 10px;
+  padding-left: 15px;
+  width: 280px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-style: none;
+  height: 60px;
+}
+
+.header-container .input-container button{
+  background-color: #28c8c6;
+  border-style: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  color: #fff;
+  width: 65px;
+  height: 60px;
+}
+
+.header-container .input-container button i{
+  font-size: 15px;
+}
+
+.header-container .input-container button:hover{
+  background-color: red;
+  cursor: pointer;
+}
+
 
 
 
