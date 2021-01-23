@@ -12,6 +12,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -59,17 +60,32 @@ header {
   margin: 0 auto;
   height: 100vh;
   padding: 50px 20px 0 20px;
+  position: relative;
 }
 
 .header-container .nav-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  position: relative;
+}
+
+.header-container .nav-container .logo img:hover {
+  opacity: .9;
+  cursor: pointer;
 }
 
 .header-container .nav-container nav {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.header-container .nav-container .mobile-bars {
+  display: none;
+}
+
+.header-container .nav-container .mobile-nav {
+  display: none;
 }
 
 .header-container .nav-container nav ul {
@@ -80,23 +96,35 @@ header {
   margin: 0 20px;
 }
 
-.header-container .nav-container nav ul li a{
+.header-container .nav-container nav ul li a:link, 
+.header-container .nav-container nav ul li a:visited {
+  padding: 8px 0;
   text-decoration: none;
   color: #fff;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
 }
 
-.header-container .nav-container nav ul li:last-child a {
+.header-container .nav-container nav ul li a:hover, 
+.header-container .nav-container nav ul li a:active {
+  border-bottom: 2px solid #28c8c6;
+}
+
+.header-container .nav-container nav ul li:last-child a:link,
+.header-container .nav-container nav ul li:last-child a:visited {
   background-color: #a100ff;
   padding: 10px 15px 10px 25px;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
+  border-bottom: none;
 }
 
-.header-container .nav-container nav ul li:last-child a:hover {
+.header-container .nav-container nav ul li:last-child a:hover,
+.header-container .nav-container nav ul li:last-child a:active {
   cursor: pointer;
   background-color: #28c8c6;
 }
@@ -127,7 +155,8 @@ header {
 }
 
 .header-container .input-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 300px 65px;
 }
 
 .header-container .input-container .input-pos {
@@ -143,9 +172,10 @@ header {
 }
 
 .header-container .input-container input{
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   padding-left: 15px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -153,7 +183,7 @@ header {
   height: 60px;
 }
 
-.header-container .input-container button{
+.header-container .input-container button {
   background-color: #28c8c6;
   border-style: none;
   border-radius: 2px;
@@ -164,16 +194,82 @@ header {
   height: 60px;
 }
 
-.header-container .input-container button i{
+.header-container .input-container button i {
   font-size: 15px;
 }
 
-.header-container .input-container button:hover{
+.header-container .input-container button:hover, 
+.header-container .input-container button:active {
   background-color: red;
   cursor: pointer;
 }
 
 
+
+/*
+#######################################################
+
+Mobile Section
+
+#######################################################
+*/
+
+@media only screen and (max-width: 700px) { 
+
+  .header-container .nav-container nav {
+    display: none;
+  }
+
+  .header-container .input-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .header-container .nav-container .mobile-bars {
+    display: flex;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+
+  .header-container .nav-container .mobile-bars .bar {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #ff5722;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+  }
+
+  .header-container .nav-container .mob-nav {
+    display: block;
+    color: #fff;
+  }
+  
+  .header-container .input-container .input-pos, .header-container .input-container .input-pos input{
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .header-container .input-container button{
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 380px) { 
+
+  .header-container .sub-header-container h1 {
+    font-size: 50px;
+  }
+}
 
 
 
