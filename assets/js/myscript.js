@@ -1,9 +1,11 @@
+// Retrieving hamgburger bars and adding click toggle
 const hamMenuBars = document.querySelector('.mobile-bars');
 
 hamMenuBars.addEventListener('click', function(){
     hamMenuBars.classList.toggle('toggle');
 });
 
+// Adding hamgburger menu items and overlay background
 function hamMenuDisplay() {
     const hamMenuItems = document.querySelector('.mobile-nav');
     const overlayBg = document.querySelector('.overlay');
