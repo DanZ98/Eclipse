@@ -455,12 +455,6 @@ Design Guidelines Section
   padding: 20px;
 }
 
-#design-guidelines nav ul li {
-  /* border-top: 1px solid #28c8c6;
-  border-bottom: 1px solid #28c8c6;
-  padding: 20px; */
-}
-
 #design-guidelines nav ul a {
   text-decoration: none;
   color: #28c8c6;
@@ -477,6 +471,69 @@ Design Guidelines Section
   background-color: #28c8c6;
 }
 
+#design-guidelines .design-guidelines-container {
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  justify-content: center;
+  margin-top: 50px;
+  column-gap: 20px;
+}
+
+#design-guidelines .design-guidelines-container .design-listing-one {
+  padding-bottom: 60px;
+}
+
+#design-guidelines .design-guidelines-container img {
+  display: block;
+  max-width: 380px;
+  width: 100%;
+}
+
+#design-guidelines .design-guidelines-container .design-listing-container {
+  display: grid;
+  grid-template-columns: 280px 20px;
+  justify-content: center;
+  background-color: #fff;
+  height: 50px;
+  align-items: center;
+}
+
+#design-guidelines .design-guidelines-container .design-listing-container p {
+  margin-top: 0;
+}
+
+#design-guidelines .design-guidelines-container .design-listing-container p:hover {
+  color: #28c8c6;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition all 0.5s ease;
+}
+
+#design-guidelines .design-guidelines-container .design-listing-container span {
+  color: #28c8c6;
+}
+
+/*
+#######################################################
+
+Design Guidelines Section
+
+#######################################################
+*/
+
+#push-yourself {
+  background: url(../images/push-your-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #fd634e;
+  height: 950px;
+  position: relative;
+  background-attachment: scroll;
+}
+
 /*
 #######################################################
 
@@ -484,6 +541,17 @@ Mobile Section
 
 #######################################################
 */
+
+@media only screen and (max-width: 1215px) { 
+  #design-guidelines .design-guidelines-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #design-guidelines .design-guidelines-container .design-listing-one {
+    padding-bottom: 60px;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   #features-app .features-items-container {
