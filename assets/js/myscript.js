@@ -18,6 +18,3 @@ function hamMenuDisplay() {
         overlayBg.style.display = 'block';
     }
 }
-
-
-
