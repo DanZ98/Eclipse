@@ -58,10 +58,10 @@ header {
   background-attachment: scroll;
 }
 
-.header-container, #features-app {
+.header-container, #features-app, .push-yourself-container {
   position: relative;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   padding: 50px 20px 90px 20px;
 }
@@ -138,7 +138,7 @@ header {
   width: 100%;
 }
 
-.header-container .sub-header-container h1 {
+.header-container .sub-header-container h1, #push-yourself .push-yourself-container h4 {
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 60px;
@@ -327,8 +327,6 @@ Latest Design Section
 #latest-design .down-arr-container:last-child .dwn-arr:last-child {
   color: #fff;
 }
-
-
 
 /*
 #######################################################
@@ -537,6 +535,108 @@ Design Guidelines Section
 /*
 #######################################################
 
+Push Yourself Section
+
+#######################################################
+*/
+
+#push-yourself .push-yourself-container {
+  padding: 0 20px;
+}
+
+#push-yourself .push-yourself-container .push-yourself-content {
+  display: grid;
+  grid-template-columns: repeat(3, 200px 530px);
+  height: 100vh;
+  align-content: center;
+  position: relative;
+}
+
+#push-yourself .push-yourself-container .push-yourself-content .laptop {
+  position: absolute;
+  top: 370px;
+  right: 0;
+}
+
+#push-yourself .push-yourself-container .push-yourself-content .push-yourself-copy p {
+  margin-top: 20px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #fff;
+  line-height: normal;
+}
+
+/*
+#######################################################
+
+Footer Section
+
+#######################################################
+*/
+
+footer {
+  position: relative;
+  height: 100vh;
+}
+
+footer .up-arrow {
+  position: absolute;
+  top: 195px;
+  left: 20px;
+  background-color: #919191;
+  padding: 10px;
+  color: #fff;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+footer .footer-container {
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}
+
+footer .footer-container .social-icon-container {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+
+}
+
+footer .footer-container .social-icon-container .tweet, footer .footer-container .social-icon-container .facebook {
+  padding: 7px 13px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+footer .footer-container .social-icon-container .tweet {
+  background-color: #69b6f2;
+}
+
+footer .footer-container .social-icon-container .facebook {
+  background-color: #3a579a;
+}
+
+footer .footer-container .social-icon-container .tweet a, footer .footer-container .social-icon-container .facebook a {
+  color: #fff;;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/*
+#######################################################
+
 Mobile Section
 
 #######################################################
@@ -550,6 +650,33 @@ Mobile Section
 
   #design-guidelines .design-guidelines-container .design-listing-one {
     padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 1105px) {
+  #push-yourself .push-yourself-container .push-yourself-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    display: grid;
+  }
+
+  #push-yourself .push-yourself-container .push-yourself-content .laptop {
+    top: 700px;
+    left: 0;
+    margin: 70px auto 0 auto;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+
+  #push-yourself .push-yourself-container .push-yourself-content .laptop img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+  }
+
+  #push-yourself .push-yourself-container .push-yourself-content .logo-container {
+    margin-bottom: 40px;
   }
 }
 
@@ -686,6 +813,11 @@ Mobile Section
   #features-app .features-items-container {
     grid-template-columns: 1fr;
   }
+
+  #push-yourself .push-yourself-container .push-yourself-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 @media only screen and (max-width: 450px) { 
@@ -703,7 +835,7 @@ Mobile Section
 
 @media only screen and (max-width: 380px) { 
 
-  .header-container .sub-header-container h1 {
+  .header-container .sub-header-container h1, .header-container .sub-header-container h1, #push-yourself .push-yourself-container h4 {
     font-size: 50px;
   }
 }
