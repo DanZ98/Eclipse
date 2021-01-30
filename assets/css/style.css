@@ -14,6 +14,7 @@ html {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
 }
+
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
@@ -28,6 +29,7 @@ html {
     clear: both;
     height: 0;
 }
+
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
@@ -208,8 +210,11 @@ header {
   position: absolute;
   right: -40px; 
   bottom: -18px;
-  transform: rotate(-90deg);
-  z-index: 4;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  z-index: 4; 
 }
 
 /* firefox browser incompatiblity  */
@@ -337,7 +342,7 @@ Features App Section
 */
 
 #features-app h3 {
-  margin-top: 120px;
+  margin-top: 100px;
   text-align: center;
   font-family: 'Montserrat';
   font-size: 30px;
@@ -478,7 +483,7 @@ Design Guidelines Section
 }
 
 #design-guidelines .design-guidelines-container .design-listing-one {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 #design-guidelines .design-guidelines-container img {
@@ -576,7 +581,7 @@ Footer Section
 
 footer {
   position: relative;
-  height: 100vh;
+  height: 1000px;
 }
 
 footer .up-arrow {
@@ -592,6 +597,11 @@ footer .up-arrow {
   -o-border-radius: 3px;
 }
 
+footer .up-arrow:hover {
+  background-color: #28c8c6;
+  cursor: pointer;
+}
+
 footer .footer-container {
   position: absolute;
   margin: 0 auto;
@@ -605,7 +615,6 @@ footer .footer-container {
 
 footer .footer-container .social-icon-container {
   display: flex;
-  column-gap: 10px;
   justify-content: flex-end;
   margin-bottom: 50px;
 
@@ -620,6 +629,11 @@ footer .footer-container .social-icon-container .tweet, footer .footer-container
 
 footer .footer-container .social-icon-container .tweet {
   background-color: #69b6f2;
+  margin-right: 10px;
+}
+
+footer .footer-container .social-icon-container .tweet:hover, footer .footer-container .social-icon-container .facebook:hover {
+  background-color: #28c8c6;
 }
 
 footer .footer-container .social-icon-container .facebook {
@@ -632,6 +646,52 @@ footer .footer-container .social-icon-container .tweet a, footer .footer-contain
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 13px;
+}
+
+footer .footer-container .footer-content-container {
+  margin-bottom: 20px;
+}
+
+footer .footer-container .footer-content-container .footer-info{
+  display: grid;
+  grid-template-columns: 120px 120px 1fr;
+}
+
+footer .footer-container .footer-content-container .footer-info .footer-content {
+  display: inline-grid;
+}
+
+
+footer .footer-container .footer-content-container .footer-info .footer-content:nth-child(2) {
+  grid-auto-rows: 24px;
+}
+
+footer .footer-container .footer-content-container .footer-info .footer-content:last-child {
+  grid-auto-rows: 22px;
+  font-family: 'Montserrat';
+  color: #8297a7;
+  font-size: 12px;
+  justify-items: end;
+  text-align: right;
+}
+
+footer .footer-container .footer-content-container .footer-info .footer-content a {
+  margin-bottom: 15px;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  color: #8297a7;
+  text-decoration: none;
+}
+
+footer .footer-container .footer-content-container .footer-info .footer-content a:hover {
+  color: #28c8c6;
+}
+
+footer .footer-container p {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: normal;
+  color: #8297a7;
 }
 
 /*
@@ -817,6 +877,30 @@ Mobile Section
   #push-yourself .push-yourself-container .push-yourself-content {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  footer .footer-container .footer-content-container .footer-info {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  footer .footer-container .footer-content-container .footer-info .footer-content, footer .footer-container .footer-content-container .footer-info .footer-content:nth-child(2), footer .footer-container .footer-content-container .footer-info .footer-content:last-child {
+    justify-items: center;
+  }
+
+  footer .footer-container .footer-content-container .footer-info .footer-content:last-child {
+    justify-items: center;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 545px) { 
+  footer .footer-container {
+    top: 500px;
   }
 }
 
