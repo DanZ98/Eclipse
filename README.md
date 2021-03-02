@@ -1,6 +1,6 @@
 # Eclipse Landing Page Project
 
-A static landing page project showcasing HTML5 and CSS3(Grid). The objective is to understand the CSS grid system, comprehend the benefits and disect the CSS properties to create complex layouts. 
+Converted PSD file into a static landing page project showcasing HTML5 and CSS3(Grid). The objective is to understand the CSS grid system, comprehend the benefits and disect the CSS properties to create complex layouts. 
 
 ## Resources
 
