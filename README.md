@@ -9,7 +9,7 @@ CSS-Tricks Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
 W3schools.com: https://www.w3schools.com/css/css_grid.asp
 
 Youtube Grid Tutorial: https://www.youtube.com/watch?v=EFafSYg-PkI
-                       https://www.youtube.com/watch?v=jV8B24rSN5o
+https://www.youtube.com/watch?v=jV8B24rSN5o
 
 BLAZ Free PSD Files: https://blazrobar.com/free-psd-website-templates/eclipse-free-website-psd-template/
 
